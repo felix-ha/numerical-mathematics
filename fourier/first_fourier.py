@@ -1,5 +1,5 @@
 import numpy as np
-from functions import rect
+from functions import rect, ear
 from fourier import fourier_coeff, calculate_fourier_series, fourier_tranformation
 from matplotlib import pyplot as plt
 plt.style.use('ggplot')
@@ -41,7 +41,7 @@ def fourier_series_rect():
 
 
 def fourier_transormation_rect():
-    f = rect
+    f = ear
 
     x = np.arange(-6, 6, 0.01)
     f_x = [f(z) for z in x]
