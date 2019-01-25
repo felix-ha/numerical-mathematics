@@ -41,11 +41,12 @@ def fourier_series_rect():
 
 
 def fourier_transormation_rect():
-    f = ear
+    f = rect
 
     x = np.arange(-6, 6, 0.01)
+    x_trafo = np.arange(-15, 15, 0.01)
     f_x = [f(z) for z in x]
-    f_fourier_trafo = [fourier_tranformation(f, z) for z in x]
+    f_fourier_trafo = [fourier_tranformation(f, z) for z in x_trafo]
 
     plt.subplot(2,1,1)
     plt.plot(x, f_x)
@@ -54,20 +55,20 @@ def fourier_transormation_rect():
 
 
     plt.subplot(2,1,2)
-    plt.plot(x, np.real(f_fourier_trafo))
-    plt.plot(x, np.imag(f_fourier_trafo))
+    plt.plot(x_trafo, np.real(f_fourier_trafo))
+    plt.plot(x_trafo, np.imag(f_fourier_trafo))
     plt.title('fourier transformation')
     plt.legend(['real', 'imag'])
 
 
 
-    plt.savefig('fourier.png', dpi=500)
+    plt.savefig('fourier_transform.png', dpi=500)
     plt.show()
 
 
 
 if __name__ == '__main__':
-    # fourier_series_rect()
+    fourier_series_rect()
     fourier_transormation_rect()
 
 

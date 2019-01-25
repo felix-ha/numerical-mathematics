@@ -21,6 +21,11 @@ def fourier_tranformation(f, xi):
     return integral(_f, -finite_bound, finite_bound)
 
 
+# DoTo:
+def fourier_tranformation_inverse(f, xi):
+    pass
+
+
 def fourier_coeff(f, T, N):
     a = np.empty(N+1, dtype=np.float)
     a[0] = (1 / T) * integral(f, 0, T)
