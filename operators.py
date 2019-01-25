@@ -11,8 +11,16 @@ def f(x):
 
 def derive(f, x):
     h = 0.01
-    dimension_domain = len(x)
-    dimension_value = len(f(x))
+
+    try:
+        dimension_value = len(f(x))
+    except TypeError:
+        dimension_value = 1
+
+    try:
+        dimension_domain = len(x)
+    except TypeError:
+        dimension_domain = 1
 
     if dimension_value == 1:
         result = np.empty(dimension_domain)
