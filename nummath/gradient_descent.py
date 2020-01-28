@@ -1,6 +1,6 @@
 import time
-from optimization.optimizer import Optimizer
-from optimization.optimization_result import OptimizationResult
+from .optimizer import Optimizer
+from .optimization_result import OptimizationResult
 import numpy as np
 
 
